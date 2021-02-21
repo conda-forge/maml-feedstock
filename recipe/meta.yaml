@@ -28,6 +28,7 @@ requirements:
     - scikit-learn
     - scipy
     - tensorflow
+    - cvxpy
 
 test:
   imports:
