@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/materialsvirtuallab/maml/archive/682fd66f252f42100b3291cd1051a734df72dfe0.tar.gz
-  sha256: 13482b118b86671a0ed0262ae8a2272d8242cb07b452520fe14d2f2c10e4e410
+  sha256: 5a36b849e5c8e5cba0ac0adeb7f57fb139fc88c8f181720a1a07e534a0f0cbf1
 
 build:
   number: 0
