@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/materialsvirtuallab/maml/archive/682fd66f252f42100b3291cd1051a734df72dfe0.tar.gz
+  url: https://github.com/materialsvirtuallab/maml/archive/415cbd2de9dcf7dae58262fa8516573490af879c.tar.gz
   sha256: 5a36b849e5c8e5cba0ac0adeb7f57fb139fc88c8f181720a1a07e534a0f0cbf1
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
