@@ -1,16 +1,16 @@
 {% set name = "maml" %}
-{% set version = "0.0.3" %}
+{% set version = "2022.1.28" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/materialsvirtuallab/maml/archive/415cbd2de9dcf7dae58262fa8516573490af879c.tar.gz
-  sha256: 5044a71ddf741597e4b046e2b5da24a6b26a1c264e8206904fa481f24381f8d7
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/maml-{{ version }}.tar.gz
+  sha256: 6f7fcab0b6e0b11a490209a97dffd24f88ff9b477ab4ffea130d97cb83a7f60d
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
