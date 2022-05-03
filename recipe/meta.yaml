@@ -1,5 +1,5 @@
 {% set name = "maml" %}
-{% set version = "2022.1.28" %}
+{% set version = "2022.5.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/materialsvirtuallab/maml/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: d3fb093979ee625ec81281d75dd8c98d601a074a4a31ebdc634b198ea1b394c3
+  sha256: 4df0d4abf8ae84f18fa008dd5334f3bd0656c12a30fbce6336d1344b7d6db6e3
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -45,7 +45,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Python for Materials Machine Learning, Materials Descriptors, Machine Learning Force Fields, Deep Learning, etc.'
+  summary: Python for Materials Machine Learning, Materials Descriptors, Machine Learning Force Fields, Deep Learning, etc.
   description: |
     maml (MAterials Machine Learning) is a Python package that 
     aims to provide useful high-level interfaces that make ML 
