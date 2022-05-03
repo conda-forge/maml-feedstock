@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/maml-{{ version }}.tar.gz
-  sha256: 6f7fcab0b6e0b11a490209a97dffd24f88ff9b477ab4ffea130d97cb83a7f60d
+  url: https://github.com/materialsvirtuallab/maml/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: d3fb093979ee625ec81281d75dd8c98d601a074a4a31ebdc634b198ea1b394c3
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
