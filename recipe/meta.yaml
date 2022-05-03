@@ -10,7 +10,7 @@ source:
   sha256: d3fb093979ee625ec81281d75dd8c98d601a074a4a31ebdc634b198ea1b394c3
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -19,16 +19,17 @@ requirements:
     - pip
     - python >=3.5
   run:
-    - keras
-    - monty
-    - numpy
-    - pandas
-    - pymatgen
     - python >=3.5
-    - scikit-learn
-    - scipy
-    - tensorflow
-    - cvxpy
+    - numpy =1.22.3
+    - scipy =1.7.3
+    - pymatgen =2022.3.7
+    - monty =2022.3.12
+    - pandas =1.4.1
+    - scikit-learn =1.0.2
+    - h5py =3.6.0
+    - joblib =1.1.0
+    - tqdm =4.63.0
+    - pymongo =4.0.1
 
 test:
   imports:
