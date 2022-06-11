@@ -1,5 +1,5 @@
 {% set name = "maml" %}
-{% set version = "2022.5.3" %}
+{% set version = "2022.6.11" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/materialsvirtuallab/maml/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 4df0d4abf8ae84f18fa008dd5334f3bd0656c12a30fbce6336d1344b7d6db6e3
+  sha256: d179fd70caaaf95c132869cd0d39fff5c9d976cbb6bd6144f07704d9be2e8151
 
 build:
   number: 0
