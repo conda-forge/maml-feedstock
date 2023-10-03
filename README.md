@@ -3,26 +3,11 @@ About maml-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/maml-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/materialsvirtuallab/maml
+Home: https://materialsvirtuallab.github.io/maml
 
 Package license: BSD-3-Clause
 
-Summary: Python for Materials Machine Learning, Materials Descriptors, Machine Learning Force Fields, Deep Learning, etc.
-
-Development: https://github.com/materialsvirtuallab/maml
-
-Documentation: http://maml.ai/index.html
-
-maml (MAterials Machine Learning) is a Python package that
-aims to provide useful high-level interfaces that make ML
-for materials science as easy as possible.
-The goal of maml is not to duplicate functionality already
-available in other packages. maml relies on well-established
-packages such as scikit-learn and tensorflow for
-implementations of ML algorithms, as well as other materials
-science packages such as pymatgen and matminer for crystal/
-molecule manipulation and feature generation.
-
+Summary: maml is a machine learning library for materials science.
 
 Current build status
 ====================

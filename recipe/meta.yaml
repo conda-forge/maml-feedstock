@@ -6,58 +6,42 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/materialsvirtuallab/maml/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: e3de0f27af529fe01537d988be166b77f2a2bd0f8121c5f614e5eb8037914bcb
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/maml-{{ version }}.tar.gz
+  sha256: 163e19da32f32ea65377b434a11dcf7529e1e676c5585518d0af447dae2a2a4d
 
 build:
-  number: 0
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
-    - pip
     - python >=3.5
+    - setuptools >=43.0.0
+    - pip
   run:
     - python >=3.5
-    - numpy =1.22.3
-    - scipy =1.7.3
-    - pymatgen =2022.3.7
-    - monty =2022.3.12
-    - pandas =1.4.1
-    - scikit-learn =1.0.2
-    - h5py =3.6.0
-    - joblib =1.1.0
-    - tqdm =4.63.0
-    - pymongo =4.0.1
+    - numpy
+    - scipy
+    - monty
+    - scikit-learn
+    - pandas
+    - pymatgen
+    - tqdm
 
 test:
   imports:
     - maml
-    - maml.apps
   commands:
     - pip check
   requires:
     - pip
 
 about:
-  home: https://github.com/materialsvirtuallab/maml
+  home: https://materialsvirtuallab.github.io/maml
+  summary: maml is a machine learning library for materials science.
   license: BSD-3-Clause
-  license_family: BSD
   license_file: LICENSE
-  summary: Python for Materials Machine Learning, Materials Descriptors, Machine Learning Force Fields, Deep Learning, etc.
-  description: |
-    maml (MAterials Machine Learning) is a Python package that 
-    aims to provide useful high-level interfaces that make ML 
-    for materials science as easy as possible.
-    The goal of maml is not to duplicate functionality already
-    available in other packages. maml relies on well-established
-    packages such as scikit-learn and tensorflow for 
-    implementations of ML algorithms, as well as other materials
-    science packages such as pymatgen and matminer for crystal/
-    molecule manipulation and feature generation.
-  doc_url: http://maml.ai/index.html
-  dev_url: https://github.com/materialsvirtuallab/maml
 
 extra:
   recipe-maintainers:
