@@ -1,5 +1,5 @@
 {% set name = "maml" %}
-{% set version = "2023.9.9" %}
+{% set version = "2024.6.13" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/maml-{{ version }}.tar.gz
-  sha256: 163e19da32f32ea65377b434a11dcf7529e1e676c5585518d0af447dae2a2a4d
+  sha256: 7902e00973a5ef1143b783e7ef8c0fa1dad8c4cd73b621a86b440af0ab36c042
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
