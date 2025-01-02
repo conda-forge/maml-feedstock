@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/maml-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/maml-{{ version }}.tar.gz
   sha256: 7902e00973a5ef1143b783e7ef8c0fa1dad8c4cd73b621a86b440af0ab36c042
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   noarch: python
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.5
+    - python {{ python_min }}
     - setuptools >=43.0.0
     - pip
   run:
-    - python >=3.5
+    - python >={{ python_min }}
     - numpy
     - scipy
     - monty
@@ -36,6 +36,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://materialsvirtuallab.github.io/maml
