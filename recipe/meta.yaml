@@ -1,5 +1,6 @@
 {% set name = "maml" %}
-{% set version = "2024.6.13" %}
+{% set version = "2025.2.25" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +8,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/maml-{{ version }}.tar.gz
-  sha256: 7902e00973a5ef1143b783e7ef8c0fa1dad8c4cd73b621a86b440af0ab36c042
+  sha256: 922ea47ec3632c5d11e99f273c17ee4297512db46df89a421c34059bf80135be
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   noarch: python
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -20,6 +21,7 @@ requirements:
     - setuptools >=43.0.0
     - pip
   run:
+    - mp-api
     - python >={{ python_min }}
     - numpy
     - scipy
