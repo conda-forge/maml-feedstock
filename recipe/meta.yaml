@@ -1,5 +1,5 @@
 {% set name = "maml" %}
-{% set version = "2025.2.25" %}
+{% set version = "2025.4.3" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/maml-{{ version }}.tar.gz
-  sha256: 922ea47ec3632c5d11e99f273c17ee4297512db46df89a421c34059bf80135be
+  sha256: 3ad97ab5b7a4db4dbb1840e0200686e476fdb380b1515765137852d59a49b9a8
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -26,7 +26,7 @@ requirements:
     - numpy
     - scipy
     - monty
-    - scikit-learn
+    - scikit-learn >=1.6.1
     - pandas
     - pymatgen
     - tqdm
