@@ -3,7 +3,7 @@ schema_version: 1
 context:
   name: maml
   version: 2026.11.12
-  python_min: '3.10'
+  python_min: '3.11'
 
 package:
   name: ${{ name|lower }}
